@@ -1,6 +1,7 @@
 package com.syndicate._service.repository;
 
 import com.syndicate._service.model.Servicio;
+import com.syndicate._service.model.Usuario;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

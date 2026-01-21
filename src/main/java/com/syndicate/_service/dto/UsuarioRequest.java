@@ -1,11 +1,14 @@
 package com.syndicate._service.dto;
 
+import com.syndicate._service.model.UsuarioRol;
+
 public record UsuarioRequest(
     String nombre,
     String email,
     String direccion,
-    String telofono,
+    String telefono,
     String password_hash,
-    boolean prestador,
-    String fecha_registro
+    Boolean prestador,
+    String fecha_registro,
+    UsuarioRol rol
 ){}

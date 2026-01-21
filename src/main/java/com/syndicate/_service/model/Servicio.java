@@ -18,9 +18,11 @@ public class Servicio {
     @Column(name = "id_servicio")
     private Integer idServicio;
 
-    @JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario")
-    @Column(name = "idUsuario", insertable = false, updatable = false)
-    private Integer idUsuario;
+
+    // 🔑 RELACIÓN OBLIGATORIA
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_usuario", nullable = false)
+    private Usuario usuario;
 
     @Column(nullable = false, length = 150)
     private String nombre;

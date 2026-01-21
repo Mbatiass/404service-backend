@@ -2,9 +2,14 @@ package com.syndicate._service.controller;
 
 import com.syndicate._service.dto.ResenaRequest;
 import com.syndicate._service.dto.ResenaResponse;
+import com.syndicate._service.service.ContratacionService;
 import com.syndicate._service.service.ResenaService;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-
+import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

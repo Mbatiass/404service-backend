@@ -2,6 +2,8 @@ package com.syndicate._service.service;
 
 import com.syndicate._service.dto.ResenaRequest;
 import com.syndicate._service.dto.ResenaResponse;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 

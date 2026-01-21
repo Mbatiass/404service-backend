@@ -18,9 +18,9 @@ public class Resena {
     private Integer idResena;
 
 
-    @JoinColumn(name = "idContratacion", referencedColumnName = "idContratacion")
-    @Column(name = "idContratacion", insertable = false, updatable = false)
-    private Integer idContratacion;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "idContratacion", nullable = false)
+    private Contratacion contratacion;
 
     @Column(nullable = false)
     private Byte calificacion;
@@ -31,5 +31,5 @@ public class Resena {
     @Column(nullable = false)
     private LocalDateTime fecha = LocalDateTime.now();
 
-    // Getters y setters
+
 }

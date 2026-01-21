@@ -1,5 +1,6 @@
 package com.syndicate._service.repository;
 
+import com.syndicate._service.model.Contratacion;
 import com.syndicate._service.model.Resena;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

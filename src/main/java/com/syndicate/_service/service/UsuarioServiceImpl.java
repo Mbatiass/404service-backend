@@ -45,6 +45,10 @@ public class UsuarioServiceImpl implements UsuarioService {
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
         usuario.setNombre(request.nombre());
         usuario.setEmail(request.email());
+        usuario.setDireccion(request.direccion());
+        usuario.setTelefono(request.telefono());
+        usuario.setPrestador(request.prestador() != null ? request.prestador() : false);
+        usuario.setFecha_registro(request.fecha_registro());
         return UsuarioMapper.toResponse(usuarioRepository.save(usuario));
     }
 

@@ -15,9 +15,9 @@ public class ServicioImagen {
     @Column(name = "id_imagen")
     private Integer idImagen;
 
-    @JoinColumn(name = "idServicio", referencedColumnName = "idServicio")
-    @Column(name = "idServicio", insertable = false, updatable = false)
-    private Integer idServicio;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_servicio", nullable = false)
+    private Servicio servicio;
 
     @Column(name = "imagen_url", nullable = false, length = 255)
     private String imagenUrl;

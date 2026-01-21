@@ -17,14 +17,13 @@ public class Contratacion {
     @Column(name = "id_contratacion")
     private Integer idContratacion;
 
-    @JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario")
-    @Column(name = "idUsuario", insertable = false, updatable = false)
-    private Integer idUsuario;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_usuario", nullable = false)
+    private Usuario usuario;
 
-
-    @JoinColumn(name = "idServicio", referencedColumnName = "idServicio")
-    @Column(name = "idServicio", insertable = false, updatable = false)
-    private Integer idServicio;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_servicio", nullable = false)
+    private Servicio servicio;
 
     @Column(nullable = false)
     private LocalDate fecha;

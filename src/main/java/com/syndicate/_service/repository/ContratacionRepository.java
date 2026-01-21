@@ -9,14 +9,14 @@ import org.springframework.data.repository.query.Param;
 
 public interface ContratacionRepository extends JpaRepository<Contratacion, Integer>{
     // Búsqueda por id (contiene, case-insensitive)
-    Page<Contratacion> findByIdUsuario(Integer id, Pageable pageable);
+   // Page<Contratacion> findByIdUsuario(Integer id, Pageable pageable);
 
     // También podemos usar una consulta @Query para más control
-    @Query("SELECT c FROM Contratacion c WHERE c.idContratacion = :id")
-    Page<Contratacion> findByIdContratacion(@Param("id") Long id, Pageable pageable);
+//@Query("SELECT c FROM Contratacion c WHERE c.idContratacion = :id")
+    //<Contratacion> findByIdContratacion(@Param("id") Long id, Pageable pageable);
 
     // Obtener todos ordenados por idUsuario
-    Page<Contratacion> findAllByOrderByIdUsuario(Pageable pageable);
+//Page<Contratacion> findAllByOrderByIdUsuario(Pageable pageable);
 
 
 }

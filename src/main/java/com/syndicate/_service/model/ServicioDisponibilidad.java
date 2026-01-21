@@ -17,9 +17,9 @@ public class ServicioDisponibilidad {
     @Column(name = "id_disponibilidad")
     private Integer idDisponibilidad;
 
-    @JoinColumn(name = "idServicio", referencedColumnName = "idServicio")
-    @Column(name = "idServicio", insertable = false, updatable = false)
-    private Integer idServicio;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_servicio", nullable = false)
+    private Servicio servicio;
 
     @Column(name = "dia_semana", nullable = false)
     private Byte diaSemana;

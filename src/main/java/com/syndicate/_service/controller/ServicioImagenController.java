@@ -2,8 +2,12 @@ package com.syndicate._service.controller;
 
 import com.syndicate._service.dto.ServicioImagenRequest;
 import com.syndicate._service.dto.ServicioImagenResponse;
+import com.syndicate._service.service.ContratacionService;
 import com.syndicate._service.service.ServicioImagenService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

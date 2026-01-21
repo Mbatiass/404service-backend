@@ -2,8 +2,13 @@ package com.syndicate._service.mapper;
 
 import com.syndicate._service.dto.ServicioRequest;
 import com.syndicate._service.dto.ServicioResponse;
+import com.syndicate._service.dto.UsuarioRequest;
+import com.syndicate._service.dto.ServicioResponse;
 import com.syndicate._service.model.Servicio;
+import com.syndicate._service.model.Servicio;
+import com.syndicate._service.model.Usuario;
 
+import java.util.List;
 
 public class ServicioMapper {
 
@@ -11,7 +16,7 @@ public class ServicioMapper {
         return ServicioResponse.builder()
                 .idServicio(Servicio.getIdServicio())
                 .nombre(Servicio.getNombre())
-                .idUsuario(Servicio.getIdUsuario())
+                .idUsuario(Servicio.getUsuario().getId())
                 .descripcion(Servicio.getDescripcion())
                 .precio(Servicio.getPrecio())
                 .modalidad(Servicio.getModalidad())
@@ -19,9 +24,9 @@ public class ServicioMapper {
                 .build();
     }
 
-    public static Servicio toEntity(ServicioRequest request) {
+    public static Servicio toEntity(ServicioRequest request, Usuario usuario) {
         Servicio Servicio = new Servicio();
-        Servicio.setIdUsuario(request.idUsuario());
+        Servicio.setUsuario(usuario);
         Servicio.setNombre(request.nombre());
         Servicio.setDescripcion(request.descripcion());
         Servicio.setPrecio(request.precio());
