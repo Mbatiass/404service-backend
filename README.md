@@ -157,6 +157,7 @@ Durante el desarrollo de este proyecto se aplicaron los siguientes contenidos:
 - Bayron Benavides  
 - Camila San Martín  
 - Cristian Delgadillo  
-- Francesca Díaz  
+- Francesca Carcamo 
 - Luis Gonzáles  
 - Matías Pérez  
+
