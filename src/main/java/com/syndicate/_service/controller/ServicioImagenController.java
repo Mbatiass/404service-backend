@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/imagenes")
+@RequestMapping("/api/imagenes")
 @RequiredArgsConstructor
 public class ServicioImagenController {
 
