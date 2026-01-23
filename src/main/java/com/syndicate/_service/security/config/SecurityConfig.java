@@ -45,6 +45,12 @@ public class SecurityConfig {
 
                         // Eliminar usuario (solo ADMIN)
                         .requestMatchers(HttpMethod.DELETE, "/api/usuarios/**").hasRole("ADMIN")
+
+                        // ✅ Catálogo público
+                        .requestMatchers(HttpMethod.GET, "/api/servicios/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/servicio-imagen/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/resenas/**").permitAll()
+
                         .requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/actuator/health").permitAll()
                         .anyRequest().authenticated()
