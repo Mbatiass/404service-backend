@@ -32,7 +32,12 @@ public class UsuarioServiceImpl implements UsuarioService {
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
         return UsuarioMapper.toResponse(usuario);
     }
+    public UsuarioResponse getUsuarioPorEmail(String email) {
+        Usuario usuario = usuarioRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
 
+        return UsuarioMapper.toResponse(usuario);
+    }
     @Override
     public UsuarioResponse guardar(UsuarioRequest request) {
         Usuario usuario = UsuarioMapper.toEntity(request);

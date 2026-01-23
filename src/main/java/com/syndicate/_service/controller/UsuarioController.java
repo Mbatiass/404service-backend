@@ -13,6 +13,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -34,6 +35,13 @@ public class UsuarioController {
     @GetMapping("/{id}")
     public ResponseEntity<UsuarioResponse> obtenerPorId(@PathVariable Integer id){
         return ResponseEntity.ok(usuarioService.getUsuario(id));
+    }
+
+
+    @GetMapping("/profile")
+    public ResponseEntity<UsuarioResponse> profile(Authentication authentication) {
+        String email = authentication.getName(); // viene del JWT (sub)
+        return ResponseEntity.ok(usuarioService.getUsuarioPorEmail(email));
     }
 
     @PostMapping

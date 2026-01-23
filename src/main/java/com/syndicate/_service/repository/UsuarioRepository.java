@@ -23,5 +23,5 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 
     // Obtener todos ordenados por email
     Page<Usuario> findAllByOrderByEmailAsc(Pageable pageable);
-
+    Optional<Usuario> findByEmail(String email);
 }

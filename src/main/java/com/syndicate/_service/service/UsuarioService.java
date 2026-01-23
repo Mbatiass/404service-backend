@@ -14,4 +14,6 @@ public interface UsuarioService {
     UsuarioResponse guardar(UsuarioRequest usuario);
     UsuarioResponse actualizar(int id,UsuarioRequest usuario);
     void eliminar(Integer id);
-}
+    public UsuarioResponse getUsuarioPorEmail(String email);
+    }
+
